@@ -1,10 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <title>Kino</title>
-  </head>
-  <body>
-    <h1>Hello</h1>
-  </body>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kino</title>
+    <link rel="shortcut icon" type="favicon.svg" href="Favicon_Image_Location" />
+
+    <script src="js/main.js"></script>
+
+    <!--Bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-sm fixed-top">
+
+        <!--Logo-->
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="img/logo-c.svg" alt="Kino">
+        </a>
+
+        <!--Toggle Menu Button-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <img class="navbar-toggler-icon" src="img/menu.svg"></img>
+        </button>
+
+        <!-- Links -->
+        <div class="nav-content collapse navbar-collapse" id="collapsibleNavbar">
+
+            <!--Navigation-->
+            <div class="nav-main col">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!--CTA-->
+            <div class="nav-cta">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="cta-2" href="#">Accedi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="cta-link" href="#">Registrati</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO SECTION -->
+    <section class="hero jumbotron">
+        <div class="container graphics d-flex flex-column align-items-center">
+
+            <div class="container images align-items-center">
+                <div class="row">
+
+                    <div class="col-6">
+                        <img class="megafono img-fluid" src="img/megafono.png"></img>
+                    </div>
+
+                    <div class="col-6">
+                        <img class="testatv img-fluid" src="img/testatv.png"></img>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container dots align-items-center">
+                <div class="row">
+
+                    <div class="col-6">
+                        <img class="dot blue img-fluid" src="img/circle.svg"></img>
+                    </div>
+
+                    <div class="col-6">
+                        <img class="dot red img-fluid" src="img/circle.svg"></img>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="container content d-flex flex-column align-items-center">
+
+            <h1 class="hero-header">Progetta il tuo film con <span>kino</span></h1>
+            <p class="hero-text">Kino è l’unica applicazione web che ti aiuta passo dopo passo a realizzare il tuo film, rendendo facile e accessibile il processo creativo e organizzativo.</p>
+
+            <div class="hero-cta">
+                <a href="#" class="primary-cta">Crea il tuo account!</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="brandvideo jumbotron">
+        <div class="container">
+            <div class="row video">
+                <div class="border-radius col-10 embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C0mr680KjYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
 </html>

@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'noe-display_bold';
+    src: url('fonts/NoeDisplay/NoeDisplay-Bold.woff2') format('woff2'), url('fonts/AkzidenzGrotesk/akzidenzgrotesk-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'akzidenz-grotesk_light';
+    src: url('fonts/AkzidenzGrotesk/akzidenzgrotesk-light-webfont.woff2') format('woff2'), url('fonts/AkzidenzGrotesk/akzidenzgrotesk-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'akzidenz-grotesk_regular';
+    src: url('fonts/AkzidenzGrotesk/akzidenzgrotesk-regular-webfont.woff2') format('woff2'), url('fonts/AkzidenzGrotesk/akzidenzgrotesk-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'akzidenz-grotesk_medium';
+    src: url('fonts/AkzidenzGrotesk/akzidenzgrotesk-medium-webfont.woff2') format('woff2'), url('fonts/AkzidenzGrotesk/akzidenzgrotesk-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #EB4F44;
+    --primary-background: #EEEEEE;
+    --secondary-background: #F2F1EA;
+}
+
+body {
+    background-color: #eeeeee;
+    margin: 0;
+    font-family: 'akzidenz-grotesk_light', sans-serif;
+}
+
+.logo {
+    height: 1.5em;
+    margin: 0.1em;
+}
+
+.navbar {
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 0px 2px 4px #aaaaaa;
+    border-radius: .5em;
+    background-color: #fafafa;
+    display: flex;
+}
+
+.nav-content {
+    display: flex;
+}
+
+.nav-main {
+    justify-content: center;
+    display: flex;
+}
+
+.nav-cta {
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-link {
+    font-family: 'akzidenz-grotesk_regular';
+    color: #212121;
+}
+
+.cta-2 {
+    font-family: 'akzidenz-grotesk_regular';
+    font-weight: 100;
+    color: #212121;
+    padding-right: 1em;
+}
+
+.cta-link {
+    font-family: 'akzidenz-grotesk_medium';
+    color: #fafafa;
+    background-color: #212121;
+    border-radius: 5em;
+    padding: 0.75em 1em;
+}
+
+
+/*HERO SECTION*/
+
+.jumbotron {
+    background-color: #eeeeee;
+    margin: 0%;
+    justify-content: center;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container.content {
+    z-index: 999;
+    transform: translate(0%, -50%);
+}
+
+.hero-header {
+    font-size: 3em;
+    font-family: noe-display_bold;
+    text-align: center;
+}
+
+.hero-header>span {
+    color: var(--primary-color);
+}
+
+.hero-text {
+    width: 75%;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: 'akzidenz-grotesk_light';
+}
+
+.hero-cta {
+    background-color: #212121;
+    border-radius: 5em;
+    padding: .5em 1.25em;
+}
+
+.hero-cta>a {
+    font-family: 'akzidenz-grotesk_medium';
+    color: #fafafa;
+}
+
+.megafono {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    height: 17em;
+    left: 10%;
+    bottom: 0%;
+}
+
+
+/*FIX RESIZE: SE TENGO L'ALTEZZA IN EM BOOTSTRAP ME LA ADATTA SOLO SU X PERCHÈ QUA GLI DO L'OVERRIDE*/
+
+.testatv {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    height: 22rem;
+    bottom: 0%;
+    right: 0%;
+}
+
+.dot {
+    z-index: 1;
+    position: absolute;
+    display: block;
+    bottom: 0%;
+    border-radius: 50%;
+}
+
+.dot.red {
+    background-color: #EB4F44;
+    height: 15em;
+    right: 20%;
+    bottom: 10vh;
+}
+
+.dot.blue {
+    background-color: #2F4FB5;
+    height: 10em;
+    bottom: 16vh;
+    left: 6%;
+}
+
+.container.graphics {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    justify-content: center;
+}
+
+.brandvideo {
+    background-color: var(--secondary-background);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row.video {
+    transform: translate(0%, +10%);
+    align-content: center;
+    justify-content: center;
+}
+
+.border-radius {
+    border-radius: 2em;
+    box-shadow: 0px 2px 8px #a2a2a2;
+}
