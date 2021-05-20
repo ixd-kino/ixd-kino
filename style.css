@@ -148,9 +148,19 @@ body {
     padding: .5em 1.25em;
 }
 
+.hero-cta:hover {
+    background-color: var(--primary-color);
+}
+
 .hero-cta>a {
     font-family: 'akzidenz-grotesk_medium';
     color: #fafafa;
+    text-decoration: none;
+}
+
+.primary-cta:hover {
+    color: #fafafa;
+    text-decoration: none;
 }
 
 .megafono {
