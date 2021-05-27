@@ -8,60 +8,60 @@
     <title>Kino</title>
     <link rel="shortcut icon" type="svg" href="img/favicon.svg" />
 
-    <script src="js/main.js"></script>
-
-    <!--Bootstrap-->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="js/main.js"></script>
 </head>
 
 <body>
 
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-sm fixed-top">
+    <!--NAVBAR-->
+    <nav class="navbar">
 
-        <!--Logo-->
-        <a class="navbar-brand" href="#">
-            <img class="logo" src="img/logo-c.svg" alt="Kino">
-        </a>
+        <div class="navTop">
+            <!--Logo-->
+            <a class="logo-wrapper" href="#">
+                <img class="logo c" src="img/logo-c.svg" alt="Kino">
+                <img class="logo w hide" src="img/logo-w.svg" alt="Kino">
+            </a>
 
-        <!--Toggle Menu Button-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <img class="navbar-toggler-icon" src="img/menu.svg"></img>
-        </button>
+            <!--Menu-->
+            <div class="menu-wrapper">
+                <button class="menu-btn" id="menuButton" onclick="toggleNav()" type="button">
+                    <img class="menu-icon" src="img/menu.svg"></img>
+                    <img class="close-icon" src="img/close.svg"></img>
+            </button>
+            </div>
+        </div>
 
-        <!-- Links -->
-        <div class="nav-content collapse navbar-collapse" id="collapsibleNavbar">
+        <!--Links-->
+        <div class="link-wrapper">
 
             <!--Navigation-->
-            <div class="nav-main col">
+            <div class="nav-wrapper">
+
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">About Us</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Blog</a>
                     </li>
                 </ul>
             </div>
 
-
             <!--CTA-->
-            <div class="nav-cta">
+            <div class="cta-wrapper">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="cta-2" href="#">Accedi</a>
+                        <a class="nav-link cta-secondary" href="#">Accedi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="cta-link" href="#">Registrati</a>
+                        <a class="nav-link cta-main cta" href="#">Registrati</a>
                     </li>
                 </ul>
             </div>
@@ -73,48 +73,34 @@
 
 
     <!-- HERO SECTION -->
-    <section class="hero jumbotron">
-        <div class="container graphics d-flex flex-column align-items-center">
+    <section class="hero">
 
-            <div class="container images align-items-center">
-                <div class="row">
 
-                    <div class="col-6">
-                        <img class="megafono img-fluid" src="img/megafono.png"></img>
-                    </div>
+        <div class="images-wrapper">
 
-                    <div class="col-6">
-                        <img class="testatv img-fluid" src="img/testatv.png"></img>
-                    </div>
-
-                </div>
+            <div class="megafono-wrapper">
+                <img class="megafono" src="img/megafono.png"></img>
             </div>
 
-            <div class="container dots align-items-center">
-                <div class="row">
-
-                    <div class="col-6">
-                        <img class="dot blue img-fluid" src="img/circle.svg"></img>
-                    </div>
-
-                    <div class="col-6">
-                        <img class="dot red img-fluid" src="img/circle.svg"></img>
-                    </div>
-                </div>
+            <div class="testatv-wrapper">
+                <img class="testatv" src="img/testatv.png"></img>
             </div>
 
         </div>
 
 
+        <div class="content-wrapper">
 
+            <div class="header-wrapper">
+                <h1 class="hero-header">Progetta il tuo film con <span class="highlight">kino</span></h1>
+            </div>
 
-        <div class="container content d-flex flex-column align-items-center">
+            <div class="hero-text-wrapper">
+                <p class="hero-text">Kino è l’unica applicazione web che ti aiuta passo dopo passo a realizzare il tuo film, rendendo facile e accessibile il processo creativo e organizzativo.</p>
+            </div>
 
-            <h1 class="hero-header">Progetta il tuo film con <span>kino</span></h1>
-            <p class="hero-text">Kino è l’unica applicazione web che ti aiuta passo dopo passo a realizzare il tuo film, rendendo facile e accessibile il processo creativo e organizzativo.</p>
-
-            <div class="hero-cta">
-                <a href="#" class="primary-cta">Crea il tuo account!</a>
+            <div class="hero-cta-wrapper">
+                <a href="#" class="primary-cta cta">Crea il tuo account!</a>
             </div>
 
         </div>
@@ -122,17 +108,80 @@
     </section>
 
     <!-- VIDEO SECTION -->
-    <section class="brandvideo jumbotron">
-        <div class="container">
-            <div class="row video">
-                <div class="border-radius col-10 embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C0mr680KjYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                        </iframe>
-                </div>
+    <section class="brandvideo">
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe class="embedded-video" src="https://www.youtube.com/embed/C0mr680KjYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
             </div>
         </div>
     </section>
 
+    <!-- ORGANIZZAZIONE -->
+    <section class="organizzazione">
+        <div class="text-wrapper">
+            <h1>Organizza le tue <span class="highlight">produzioni</span></h1>
+            <p>Pianifica le tue attività dividendole per fasi di lavorazione, assegnando task e impostando promemoria.</p>
+        </div>
+        <div class="image-wrapper">
+            <img class="clipboard" src="img/clipboard.png">
+        </div>
+    </section>
+
+    <!-- ASSISTENTE -->
+    <section class="assistente">
+        <div class="text-wrapper">
+            <h1>È il tuo primo film? Non preoccuparti, c’è Kino!</h1>
+            <p>Kino è l’assistente virtuale che ti aiuta a strutturare il lavoro, suggerendoti tempistiche di lavorazione, offrendo consigli e rispondendo alle tue domande.</p>
+        </div>
+        <div class="image-wrapper" id="okguy-wrapper">
+            <img class="okguy" src="img/okguy.png">
+        </div>
+    </section>
+
+    <!-- COLLABORAZIONE -->
+    <section class="collaborazione">
+        <div class="image-wrapper">
+            <img class="telefono" src="img/telefono-rr.png">
+        </div>
+        <div class="text-wrapper">
+            <h1><span class="highlight">Tutti insieme</span> appassionatamente</h1>
+            <p>Crea team, fai brainstorming, gestisci le revisioni e collabora con i tuoi colleghi in ogni fase della tua produzione</p>
+        </div>
+    </section>
+
+    <!-- ADATTABILE -->
+    <section class="adattabile">
+        <div class="text-wrapper">
+            <h1>Gestisci la tua produzione in <span class="highlight">totale libertà</span></h1>
+            <p>Dal thriller alla commedia, dall’amatoriale all’Oscar, scegli le funzionalità a te più utili e velocizza il lavoro.</p>
+        </div>
+        <div class="image-wrapper">
+            <img class="camera a" src="img/camera-a.png">
+            <img class="camera b" src="img/camera-b.png">
+            <img class="camera c" src="img/camera-c.png">
+        </div>
+    </section>
+
+    <!-- APPLICAZIONE -->
+    <section class="applicazione">
+        <div class="text-wrapper">
+            <h1>Il tuo film <span class="highlight">a portata di mano</span></h1>
+            <p>Porta il tuo progetto sempre in tasca: controlla i tuoi impegni, riguarda lo storyboard e consulta il copione sul set</p>
+            <div class="download-wrapper">
+                <img class="download-btn" src="img/apple-btn.svg">
+                <img class="download-btn" src="img/google-btn.svg">
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img class="smartphone" src="">
+        </div>
+    </section>
+
+
+
+
 </body>
+
 
 </html>
