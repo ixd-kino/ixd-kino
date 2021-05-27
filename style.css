@@ -411,14 +411,14 @@ section.hero {
 }
 
 .adattabile>.text-wrapper {
-    width: 60vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 0%;
     text-align: center;
     padding-top: 5%;
+    padding-left: 0;
 }
 
 .adattabile>.text-wrapper>h1 {
@@ -552,7 +552,7 @@ section.hero {
         padding: 2em;
     }
     .text-wrapper {
-        width: 80%;
+        width: 100%;
         padding: 2em;
         text-align: center;
         display: flex;
@@ -566,11 +566,23 @@ section.hero {
     .hero-header {
         font-size: 3em;
     }
+    .hero-cta-wrapper {
+        grid-column: 3/7;
+    }
     .collaborazione>.text-wrapper {
         padding: 2em;
     }
-    .hero-cta-wrapper {
-        grid-column: 3/7;
+    .assistente {
+        justify-content: center;
+    }
+    .assistente>.text-wrapper {
+        width: 100%;
+    }
+    .assistente>.text-wrapper>p {
+        width: 100%;
+    }
+    .adattabile>.text-wrapper {
+        width: 100%;
     }
     .megafono-wrapper {
         display: none;
@@ -580,5 +592,8 @@ section.hero {
         margin: auto;
         margin-bottom: 0;
         padding-right: 0;
+    }
+    #okguy-wrapper {
+        display: none;
     }
 }
