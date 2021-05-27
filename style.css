@@ -490,13 +490,14 @@ section.hero {
     .navbar.expanded {
         background-color: var(--primary-red);
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         display: flexbox;
         flex-direction: column;
         transition: 500ms;
+        overflow: hidden;
     }
     .navbar {
-        transition: 500ms;
+        transition: 200ms;
     }
     .navbar-nav.open {
         display: flex;
@@ -595,5 +596,8 @@ section.hero {
     }
     #okguy-wrapper {
         display: none;
+    }
+    .still {
+        overflow: hidden;
     }
 }

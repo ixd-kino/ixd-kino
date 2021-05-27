@@ -8,4 +8,5 @@ var toggleNav = function() {
     $(".close-icon").toggleClass("open");
     $(".c").toggleClass("hide");
     $(".w").toggleClass("hide");
+    $("body").toggleClass("still")
 }
