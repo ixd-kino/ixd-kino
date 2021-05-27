@@ -375,7 +375,7 @@ section.hero {
     min-height: 50vh;
     display: flex;
     background-color: var(--white);
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .collaborazione>.text-wrapper {
@@ -388,14 +388,6 @@ section.hero {
     max-height: 75%;
     width: auto;
     height: auto;
-}
-
-.collaborazione>.text-wrapper>h2 {
-    padding-left: 0%;
-}
-
-.collaborazione>.text-wrapper>p {
-    padding-left: 0%;
 }
 
 
@@ -527,8 +519,7 @@ section.hero {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 10%;
-        padding-bottom: 20%;
+        margin: auto;
         color: var(--white);
     }
     .nav-item:hover {
@@ -572,6 +563,9 @@ section.hero {
     }
     .collaborazione>.text-wrapper {
         padding: 2em;
+    }
+    .collaborazione>.text-wrapper>h1 {
+        font-size: 2.5em;
     }
     .assistente {
         justify-content: center;
