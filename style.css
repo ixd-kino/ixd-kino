@@ -1,41 +1,41 @@
 @font-face {
     font-family: 'noe-display';
-    src: url('./fonts/noedisplay/noedisplay-regular.woff2') format('woff2'), url('./fonts/noedisplay/noedisplay-regular.woff') format('woff');
+    src: url('/fonts/noedisplay/noedisplay-regular.woff2') format('woff2'), url('/fonts/noedisplay/noedisplay-regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'noe-display';
-    src: url('./fonts/noedisplay/noedisplay-medium.woff2') format('woff2'), url('./fonts/noedisplay/noedisplay-medium.woff') format('woff');
+    src: url('/fonts/noedisplay/noedisplay-medium.woff2') format('woff2'), url('/fonts/noedisplay/noedisplay-medium.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'noe-display';
-    src: url('./fonts/noedisplay/noedisplay-bold.woff2') format('woff2'), url('./fonts/noedisplay/noedisplay-bold.woff') format('woff');
+    src: url('/fonts/noedisplay/noedisplay-bold.woff2') format('woff2'), url('/fonts/noedisplay/noedisplay-bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'akzidenz-grotesk';
-    src: url('./fonts/akzidenzgrotesk/akzidenzgrotesk-light.woff2') format('woff2'), url('./fonts/akzidenzgrotesk/akzidenzgrotesk-light.woff') format('woff');
+    src: url('/fonts/akzidenzgrotesk/akzidenzgrotesk-light.woff2') format('woff2'), url('/fonts/akzidenzgrotesk/akzidenzgrotesk-light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'akzidenz-grotesk';
-    src: url('./fonts/akzidenzgrotesk/akzidenzgrotesk-regular.woff2') format('woff2'), url('./fonts/akzidenzgrotesk/akzidenzgrotesk-regular.woff') format('woff');
+    src: url('/fonts/akzidenzgrotesk/akzidenzgrotesk-regular.woff2') format('woff2'), url('/fonts/akzidenzgrotesk/akzidenzgrotesk-regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'akzidenz-grotesk';
-    src: url('./fonts/akzidenzgrotesk/akzidenzgrotesk-medium.woff2') format('woff2'), url('./fonts/akzidenzgrotesk/akzidenzgrotesk-medium.woff') format('woff');
+    src: url('/fonts/akzidenzgrotesk/akzidenzgrotesk-medium.woff2') format('woff2'), url('/fonts/akzidenzgrotesk/akzidenzgrotesk-medium.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
