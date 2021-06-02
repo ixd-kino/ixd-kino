@@ -687,14 +687,16 @@ footer {
 }
 
 #main {
+    justify-content: space-between;
     padding: 0;
-    padding-top: 3vw;
+    padding-top: 2.5vw;
     background-color: #c03a36;
     height: 100vh;
 }
 
 #main>.image.container {
     max-width: 40%;
+    height: 100%;
 }
 
 #main>.text.container {
@@ -849,6 +851,7 @@ footer {
     #main {
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
     #main>.text.container {
         text-align: center;
@@ -857,12 +860,13 @@ footer {
     #main>.image.container {
         align-items: center;
         max-width: 100%;
-        max-height: 40vw;
+        max-height: 45vw;
         overflow: hidden;
     }
     #chi-siamo-cover {
+        width: 100%;
         max-width: 100%;
-        transform: translate(0, -15%)
+        transform: translate(0, -10%)
     }
 }
 

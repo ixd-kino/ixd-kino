@@ -7,5 +7,5 @@ $(window).scroll(function() {
     var newWidth = map(topDist, 700, 140, 0, 100)
     var input = String(newWidth) + "%"
     $("#cinema-wrapper").css("width", input)
-    console.log(newWidth)
+
 })
