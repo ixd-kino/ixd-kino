@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kino</title>
+    <link rel="shortcut icon" href="img/favicon.svg" />
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="flickity.css">
+    <script src="js/navigation.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+</head>
+
+<body>
+
+    <header id="nav-bar" class="">
+        <div id="navTop">
+            <a href="index.html">
+                <img class="logo" src="img/logo-c.svg" alt="logo">
+                <img class="logo hide" src="img/logo-w.svg" alt="logo">
+            </a>
+            <button id="menu-btn" onClick="toggleNav()">
+            <img id="menu-icon" class="icon" src="img/menu.svg" alt="menu">
+            <img id="close-icon" class="icon hide" src="img/close.svg" alt="menu">
+        </button>
+        </div>
+        <nav class="nav-items">
+            <ul class="nav-items">
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                <li><a class="current" href="blog.html">Blog</a></li>
+                <li><a class="cta-btn" href="">Registrati</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section id="blog">
+        <div id="first-grid" class="grid-container">
+            <div id="main-news" class="news-card">
+                <h2>Ultime Storie</h2>
+            </div>
+            <div id="list-one" class="news-card">
+                <p> 10 modi di trovare location a basso costo
+                    <p>
+            </div>
+            <div id="list-two" class="news-card">
+                <p> Come risparmiare sull'attrezzatura </br> e non sulla fotografia
+                    <p>
+            </div>
+            <div id="pippo" class="news-card">
+                <p>I migliori film girati in piano sequenza</p>
+            </div>
+            <div id="paperino" class="news-card">
+                <p>Le nuove schede grafiche Ndivia allargano gli orizzonti del vfx amatoriale</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="carusel">
+        <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+            <div id="carusel-1" class="gallery-cell"><img class="cell-image" src="img/vision.png" alt=""></div>
+            <div id="carusel-2" class="gallery-cell"><img class="cell-image" src="img/vision.png" alt=""></div>
+            <div id="carusel-3" class="gallery-cell"><img class="cell-image" src="img/vision.png" alt=""></div>
+            <div id="carusel-4" class="gallery-cell"><img class="cell-image" src="img/vision.png" alt=""></div>
+            <div id="carusel-5" class="gallery-cell"><img class="cell-image" src="img/vision.png" alt=""></div>
+        </div>
+    </section>
+
+    <section id="articles">
+        <div class="story">
+            <div class="sumup">
+                <h2>Kino al festival del cinema indipendente di Bitonto</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quam perferendis consequatur error, illum suscipit non id, maiores veniam doloremque similique quas iure quidem quia.</p>
+            </div>
+            <div class="preview"><img class="preview-img" src="img/vision.png" alt=""></div>
+        </div>
+        <hr>
+        <div class="story">
+            <div class="sumup">
+                <h2>Nasce KinOtto, l'evento per gli appassionati del super8</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum placeat ab quaerat facilis pariatur magnam delectus? Error necessitatibus laborum atque ea accusantium corporis aliquid rem!
+                </p>
+            </div>
+            <div class="preview"><img class="preview-img" src="img/vision.png" alt=""></div>
+        </div>
+        <hr>
+        <div class="story">
+            <div class="sumup">
+                <h2>Decreto Ristori: Quali novità per il mondo del cinema?</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dignissimos expedita, quisquam quaerat rerum nostrum, perferendis repellat, totam quidem veritatis amet.</p>
+            </div>
+            <div class="preview"><img class="preview-img" src="img/vision.png" alt=""></div>
+        </div>
+        <hr>
+        <div class="story">
+            <div class="sumup">
+                <h2>Allievi e Maestri: rapporti mentoriali nella storia del cinema</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quia quis, magni cumque praesentium quos iusto omnis dicta expedita laborum tempore.</p>
+            </div>
+            <div class="preview"><img class="preview-img" src="img/vision.png" alt=""></div>
+        </div>
+        <hr>
+        <div class="story">
+            <div class="sumup">
+                <h2>Da Kino a Kubrick: 10 consigli per fare carriera nel mondo del cinema</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit laudantium aut omnis consectetur ea ab hic error cumque distinctio minima. Excepturi?</p>
+            </div>
+            <div class="preview"><img class="preview-img" src="img/vision.png" alt=""></div>
+        </div>
+    </section>
+
+    <footer class="red-background">
+        <div id="footer-main">
+            <div id="footer-logo-container" class="text container">
+                <img id="footer-logo" src="img/logo-w.svg" alt="">
+                <p>Kino è l’unica app che auita ad organizzare il processo di realizzazione di un film attraverso un percorso guidato in step fatto di check-list, note, board condivise.</p>
+            </div>
+            <div class="text container">
+                <ul>
+                    <p>Pagine</p>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="text container">
+                <ul>
+                    <p>Download</p>
+                    <li><a href="https://play.google.com/store">Android</a></li>
+                    <li><a href="https://www.apple.com/app-store/">iOS</a></li>
+                </ul>
+            </div>
+            <div class="text container">
+                <ul>
+                    <p>Condizioni</p>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Termini e condzioni di utilizzo</a></li>
+                </ul>
+            </div>
+            <div class="text container">
+                <ul>
+                    <p>Contatti</p>
+                    <li><a href="mailto:info@kino">info@kino.com</a></li>
+                    <li><a href="">Supporto</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div id="footer-tail">
+            <div class="text container">
+                <p>Kino S.p.A. | Via Giuseppe Candiani, 72 20138 Milano</p>
+                <p>© 2021 Lost. All rights reserved.</p>
+            </div>
+            <div class="social container">
+                <img class="social-icon" src="img/linkedin.svg" alt="">
+                <img class="social-icon" src="img/twitter.svg" alt="">
+                <img class="social-icon" src="img/vimeo.svg" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

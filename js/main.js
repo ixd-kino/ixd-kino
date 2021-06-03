@@ -1,15 +1,3 @@
-//MOBILE MENU
-
-var toggleNav = function() {
-    $("#nav-bar").toggleClass("expanded");
-    $(".nav-items").toggleClass("expanded");
-    $("body").toggleClass("lock");
-    $(".logo").toggleClass("hide");
-    $(".icon").toggleClass("hide");
-}
-
-
-
 //SHOWCASE ANIMATION
 
 $(window).scroll(function() {

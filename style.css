@@ -40,16 +40,24 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'akzidenz-grotesk';
+    src: url('/fonts/akzidenzgrotesk/akzidenzgrotesk-bold.woff2') format('woff2'), url('/fonts/akzidenzgrotesk/akzidenzgrotesk-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
 
 /*
 * {
     border: 1px solid black;
 }
+*/
 
 
 /*GLOBAL STYLES*/
 
-:root {
+ :root {
     --shadow: rgb(32 33 36 / 28%);
     --shadow-2: rgb(32 33 36 / 36%);
     --red-1: #EB4F44;
@@ -71,7 +79,7 @@ body {
     font-family: akzidenz-grotesk;
     font-weight: 300;
     scroll-behavior: smooth;
-    background-color: var(--gray);
+    background-color: var(--white);
 }
 
 
@@ -114,7 +122,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 2em;
     opacity: inherit;
 }
 
@@ -160,6 +168,7 @@ header {
     max-height: 65px;
     background-color: var(--white);
     z-index: 99;
+    transition: 250ms;
 }
 
 nav {
@@ -316,24 +325,31 @@ iframe {
 
 /*==ADATTABILITA==*/
 
+.hide {
+    display: none;
+}
+
 #personalizza-copy {
-    width: 30%;
-    margin-right: 2em;
+    width: auto;
+    margin: 0;
+    text-align: center;
+    align-items: center;
     color: var(--white);
 }
 
 #showcase-wrapper {
     display: flex;
-    width: 66%;
+    width: 100%;
     justify-content: center;
     position: relative;
     background-color: 0;
     z-index: 10;
+    padding-bottom: 41.6%;
+    margin-top: 2em;
 }
 
 #showcase {
     width: 0;
-    max-height: 20vw;
     transition: width .85s .35s cubic-bezier(0.5, 0.06, 0.01, 0.99);
     overflow: hidden;
     position: absolute;
@@ -342,6 +358,7 @@ iframe {
     box-shadow: 0 1px 6px 0 var(--shadow);
     background-color: var(--black);
     z-index: -9;
+    max-height: 100%;
 }
 
 #showcase-content.container {
@@ -377,8 +394,13 @@ iframe {
     transition: .85s .35s cubic-bezier(0.5, 0.06, 0.01, 0.99);
     -moz-transition: .85s .35s cubic-bezier(0.5, 0.06, 0.01, 0.99);
     -webkit-transition: .85s .35s cubic-bezier(0.5, 0.06, 0.01, 0.99);
+    color: var(--black);
+    font-weight: 400;
+    background-color: var(--beige);
 }
 
+
+/*
 #ideazione {
     background: var(--orange);
 }
@@ -402,8 +424,11 @@ iframe {
 #distribuzione {
     background: var(--blue);
 }
+*/
 
 #btn-container {
+    display: flex;
+    flex-direction: row;
     margin: .5rem;
 }
 
@@ -419,9 +444,12 @@ iframe {
     color: var(--white);
     font-weight: 400;
     border: 0;
+    text-align: center;
+    margin: auto .5rem;
 }
 
 .selected-toggler {
+    vertical-align: middle;
     font-size: 1em;
     margin-top: .5rem;
     margin-bottom: .5rem;
@@ -429,12 +457,9 @@ iframe {
     box-shadow: 0 4px 12px 0 var(--shadow);
     background-color: var(--black);
     color: var(--white);
+    align-items: center;
     font-weight: 500;
     opacity: 1
-}
-
-.hide {
-    display: none;
 }
 
 .showcase-background {
@@ -442,6 +467,14 @@ iframe {
     object-fit: cover;
     position: absolute;
     z-index: -1;
+}
+
+#personalizza {
+    flex-direction: column;
+}
+
+#showcase-content {
+    height: 100%;
 }
 
 
@@ -460,10 +493,13 @@ iframe {
 #kino-copy {
     position: sticky;
     top: 6rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #okguy {
-    margin: .5rem;
+    margin: 3rem;
+    align-self: center;
 }
 
 #kino-container {
@@ -510,7 +546,7 @@ iframe {
 
 #clipboard {
     object-fit: cover;
-    width: 100%;
+    width: 50%;
 }
 
 #organizzazione>.container {
@@ -749,6 +785,17 @@ footer {
     height: auto;
 }
 
+.value-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.value-txt>h2 {
+    font-family: 'akzidenz-grotesk';
+    font-weight: 700;
+}
+
 #values>.grid-container {
     grid-template-columns: repeat(3, 1fr);
 }
@@ -790,6 +837,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 #team-copy {
@@ -801,7 +849,134 @@ footer {
 }
 
 .team-wrapper {
-    font-weight: 600
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+.team-wrapper>img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 1px 6px var(--shadow);
+    margin-bottom: 1rem;
+}
+
+
+/*===BLOG===*/
+
+#blog {
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: var(--beige);
+}
+
+#first-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+}
+
+.news-card {
+    max-height: 100%;
+    max-width: 100%;
+    padding: .5rem;
+}
+
+#main-news {
+    background-color: #CA3D3B;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+#list-one {
+    background-color: var(--purple);
+}
+
+#list-two {
+    background-color: var(--pink);
+}
+
+#pippo {
+    background-color: var(--orange);
+}
+
+#paperino {
+    background-color: var(--yellow);
+    grid-column: span 2;
+}
+
+#blog>div>div>h2 {
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--white);
+}
+
+#blog>div>div>p {
+    font-size: 1.5em;
+    color: var(--white);
+    font-weight: 300;
+}
+
+#list-two {
+    background-color: var(--pink);
+}
+
+
+/*===CARUSEL===*/
+
+#carusel {
+    padding-bottom: max(6vw, 3rem);
+}
+
+.gallery {
+    width: 100%;
+    position: relative;
+    min-height: 40vh;
+    height: 40vh;
+}
+
+.gallery-cell {
+    width: 66%;
+    height: 100%;
+    min-height: 100%;
+    margin-right: 1rem;
+}
+
+.gallery-cell:before {
+    display: block;
+}
+
+.cell-image {
+    height: 1auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+/*===ARTICLES===*/
+
+#articles {
+    flex-direction: column;
+}
+
+.story {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    column-gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.sumup {
+    grid-column: 1;
+}
+
+.preview-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sumup>h2:hover {
+    color: var(--red-2);
 }
 
 @media (max-width:900px) {
@@ -868,40 +1043,19 @@ footer {
         max-width: 100%;
         transform: translate(0, -10%)
     }
+    #blog {
+        padding-top: 5rem;
+    }
+    #pippo {
+        grid-column: span 2;
+    }
+    #first-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
 }
 
 @media (max-width:1120px) {
-    #personalizza {
-        flex-direction: column;
-    }
-    #personalizza-copy {
-        width: auto;
-        margin: 0;
-        text-align: center;
-        align-items: center;
-    }
-    #btn-container {
-        display: flex;
-        flex-direction: row;
-    }
-    .showcase-toggler {
-        text-align: center;
-        margin: auto .5rem;
-    }
-    #showcase-wrapper {
-        position: relative;
-        width: 100%;
-        padding-bottom: 41.6%;
-        margin-top: 2em;
-    }
-    #showcase {
-        position: absolute;
-        height: 100%;
-        max-height: 100%;
-    }
-    #showcase-content {
-        height: 100%;
-    }
     #footer-main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -923,6 +1077,48 @@ footer {
     }
     #footer-tail {
         flex-direction: column;
+    }
+    #collaborazione {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #collaborazione>.text.container {
+        padding-top: 1.5rem;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    #collaborazione>.text.container>p {
+        width: 100%;
+    }
+    #organizzazione {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #organizzazione>.text.container {
+        padding-top: 1.5rem;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    #organizzazione>.text.container>p {
+        width: 100%;
+    }
+    #applicazione {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #applicazione>.text.container {
+        padding-top: 1.5rem;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    #applicazione>.text.container>p {
+        width: 100%;
     }
 }
 
@@ -956,6 +1152,9 @@ footer {
     }
     #footer-main>div>ul {
         align-items: center;
+    }
+    #footer-tail>.text.container {
+        text-align: center;
     }
 }
 
