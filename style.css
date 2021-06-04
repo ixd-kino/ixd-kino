@@ -837,7 +837,6 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-wrap: wrap;
 }
 
 #team-copy {
@@ -846,10 +845,11 @@ footer {
 
 #team>.grid-container {
     grid-template-columns: repeat(5, 1fr);
+    column-gap: 2rem;
 }
 
 .team-wrapper {
-    margin: 2rem;
+    width: 100%;
     font-size: 1.5rem;
 }
 
@@ -1052,6 +1052,10 @@ footer {
     #first-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
+    }
+    #team>.grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem
     }
 }
 
