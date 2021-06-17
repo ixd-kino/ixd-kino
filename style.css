@@ -272,6 +272,11 @@ footer {
     transform: translate(0, 20%);
 }
 
+#hero-text>p {
+    max-width: 60%;
+    width: 60%;
+}
+
 #hero-images {
     max-height: 45vh;
     align-items: baseline;
