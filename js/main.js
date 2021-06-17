@@ -45,11 +45,11 @@ var toggler = function(status) {
             distribuzione.velocity({ width: '13%' }, 250);
         } else {
             ideazione.velocity({ width: '27%' }, 250);
-            scrittura.velocity({ width: '20%' }, 250);
-            preprod.velocity({ width: '40%' }, 250);
+            scrittura.velocity({ width: '22%' }, 250);
+            preprod.velocity({ width: '50%' }, 250);
             produzione.velocity({ width: '80%' }, 250);
-            postprod.velocity({ width: '40%' }, 250);
-            distribuzione.velocity({ width: '30%' }, 250);
+            postprod.velocity({ width: '50%' }, 250);
+            distribuzione.velocity({ width: '33%' }, 250);
         }
 
     } else if (togglerStatus == 2) {
@@ -81,13 +81,12 @@ var toggler = function(status) {
             postprod.velocity({ width: '18%' }, 250);
             distribuzione.velocity({ width: '12%' }, 250);
         } else {
-            console.log("picio")
             ideazione.velocity({ width: '30%' }, 250);
             scrittura.velocity({ width: '25%' }, 250);
-            preprod.velocity({ width: '40%' }, 250);
+            preprod.velocity({ width: '50%' }, 250);
             produzione.velocity({ width: '40%' }, 250);
             postprod.velocity({ width: '75%' }, 250);
-            distribuzione.velocity({ width: '35%' }, 250);
+            distribuzione.velocity({ width: '37%' }, 250);
         }
 
     } else if (togglerStatus == 3) {
@@ -120,10 +119,10 @@ var toggler = function(status) {
         } else {
             ideazione.velocity({ width: '27%' }, 250);
             scrittura.velocity({ width: '33%' }, 250);
-            preprod.velocity({ width: '42%' }, 250);
-            produzione.velocity({ width: '25%' }, 250);
+            preprod.velocity({ width: '50%' }, 250);
+            produzione.velocity({ width: '40%' }, 250);
             postprod.velocity({ width: '67%' }, 250);
-            distribuzione.velocity({ width: '30%' }, 250);
+            distribuzione.velocity({ width: '40%' }, 250);
 
         }
     }

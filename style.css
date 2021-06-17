@@ -401,10 +401,6 @@ iframe {
     height: auto;
 }
 
-.showcase-title {
-    text-shadow: 1px 6px var(--shadow-2);
-}
-
 #timeline-container {
     display: flex;
     flex-wrap: wrap;
@@ -1046,6 +1042,9 @@ footer {
 }
 
 @media (max-width:900px) {
+    .selected-toggler {
+        font-size: 1em;
+    }
     .story {
         grid-template-columns: 1fr;
     }
