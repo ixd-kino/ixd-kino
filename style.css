@@ -980,7 +980,7 @@ footer {
 #blog>div>div>p {
     font-size: 1em;
     color: var(--white);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 #list-two {
@@ -1137,7 +1137,7 @@ footer {
     #blog {
         padding-top: 5rem;
     }
-    #pippo {
+    #list-three {
         grid-column: span 2;
     }
     #first-grid {
