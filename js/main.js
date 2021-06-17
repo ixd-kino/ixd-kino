@@ -127,8 +127,6 @@ var toggler = function(status) {
         }
     }
 
-    console.log(vw)
-
 };
 
 //SHOWCASE ANIMATION
