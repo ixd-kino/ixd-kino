@@ -1,23 +1,10 @@
-//SHOWCASE ANIMATION
-
-$(window).scroll(function() {
-    var top_of_element = $("#showcase").offset().top;
-    var bottom_of_element = $("#showcase").offset().top + $("#showcase").outerHeight();
-    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
-    var top_of_screen = $(window).scrollTop();
-
-    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
-        $("#showcase").css("width", "100%");
-        setTimeout(function() { $("#showcase-content").css("opacity", "1"); }, 1200);
-    } else {
-        $("#showcase").css("width", "0");
-        $("#showcase-content").css("opacity", "0");
-    }
-});
-
 //SHOWCASE TIMELINE 
 
-var togglerStatus = 0;
+var togglerStatus = 1;
+var vw = $(window).width();
+var prevWidth = vw;
+
+
 
 var toggler = function(status) {
     togglerStatus = status;
@@ -27,6 +14,7 @@ var toggler = function(status) {
     var produzione = $("#produzione");
     var postprod = $("#postprod");
     var distribuzione = $("#distribuzione");
+
 
     if (togglerStatus == 1) {
 
@@ -48,12 +36,21 @@ var toggler = function(status) {
                 $(".showcase-background").velocity({ opacity: '1' });
             })
 
-        ideazione.velocity({ width: '7%' }, 250);
-        scrittura.velocity({ width: '13%' }, 250);
-        preprod.velocity({ width: '15%' }, 250);
-        produzione.velocity({ width: '16%' }, 250);
-        postprod.velocity({ width: '15%' }, 250);
-        distribuzione.velocity({ width: '13%' }, 250);
+        if (vw > 750) {
+            ideazione.velocity({ width: '7%' }, 250);
+            scrittura.velocity({ width: '13%' }, 250);
+            preprod.velocity({ width: '15%' }, 250);
+            produzione.velocity({ width: '16%' }, 250);
+            postprod.velocity({ width: '15%' }, 250);
+            distribuzione.velocity({ width: '13%' }, 250);
+        } else {
+            ideazione.velocity({ width: '27%' }, 250);
+            scrittura.velocity({ width: '20%' }, 250);
+            preprod.velocity({ width: '40%' }, 250);
+            produzione.velocity({ width: '80%' }, 250);
+            postprod.velocity({ width: '40%' }, 250);
+            distribuzione.velocity({ width: '30%' }, 250);
+        }
 
     } else if (togglerStatus == 2) {
 
@@ -76,12 +73,22 @@ var toggler = function(status) {
                 $(".showcase-background").velocity({ opacity: '1' });
             })
 
-        ideazione.velocity({ width: '14%' }, 250);
-        scrittura.velocity({ width: '8.5%' }, 250);
-        preprod.velocity({ width: '12%' }, 250);
-        produzione.velocity({ width: '15%' }, 250);
-        postprod.velocity({ width: '18%' }, 250);
-        distribuzione.velocity({ width: '10%' }, 250);
+        if (vw > 750) {
+            ideazione.velocity({ width: '14%' }, 250);
+            scrittura.velocity({ width: '8.5%' }, 250);
+            preprod.velocity({ width: '12%' }, 250);
+            produzione.velocity({ width: '15%' }, 250);
+            postprod.velocity({ width: '18%' }, 250);
+            distribuzione.velocity({ width: '10%' }, 250);
+        } else {
+            console.log("picio")
+            ideazione.velocity({ width: '30%' }, 250);
+            scrittura.velocity({ width: '25%' }, 250);
+            preprod.velocity({ width: '40%' }, 250);
+            produzione.velocity({ width: '40%' }, 250);
+            postprod.velocity({ width: '75%' }, 250);
+            distribuzione.velocity({ width: '35%' }, 250);
+        }
 
     } else if (togglerStatus == 3) {
 
@@ -103,17 +110,81 @@ var toggler = function(status) {
                 $(".showcase-background").velocity({ opacity: '1' });
             })
 
-        ideazione.velocity({ width: '7%' }, 250);
-        scrittura.velocity({ width: '13%' }, 250);
-        preprod.velocity({ width: '12%' }, 250);
-        produzione.velocity({ width: '10%' }, 250);
-        postprod.velocity({ width: '27%' }, 250);
-        distribuzione.velocity({ width: '10%' }, 250);
+        if (vw > 750) {
+            ideazione.velocity({ width: '7%' }, 250);
+            scrittura.velocity({ width: '13%' }, 250);
+            preprod.velocity({ width: '12%' }, 250);
+            produzione.velocity({ width: '10%' }, 250);
+            postprod.velocity({ width: '27%' }, 250);
+            distribuzione.velocity({ width: '10%' }, 250);
+        } else {
+            ideazione.velocity({ width: '27%' }, 250);
+            scrittura.velocity({ width: '33%' }, 250);
+            preprod.velocity({ width: '42%' }, 250);
+            produzione.velocity({ width: '25%' }, 250);
+            postprod.velocity({ width: '67%' }, 250);
+            distribuzione.velocity({ width: '30%' }, 250);
 
+        }
     }
+
+    console.log(vw)
 
 };
 
+//SHOWCASE ANIMATION
+
+$(window).scroll(function() {
+    var top_of_element = $("#showcase").offset().top;
+    var bottom_of_element = $("#showcase").offset().top + $("#showcase").outerHeight();
+    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+    var top_of_screen = $(window).scrollTop();
+
+    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
+        $("#showcase").css("width", "100%");
+        setTimeout(function() { $("#showcase-content").css("opacity", "1"); }, 1200);
+    } else {
+        $("#showcase").css("width", "0");
+        $("#showcase-content").css("opacity", "0");
+    }
+
+});
+
+//SHOWCASE ON RESIZE
+
+$(window).resize(function() {
+
+    vw = $(window).width();
+
+    if (prevWidth >= 750 && vw < 750) {
+        toggler(togglerStatus);
+    } else if (prevWidth <= 750 && vw > 750) {
+        toggler(togglerStatus);
+
+    }
+
+    prevWidth = vw;
+});
+
+
+//COLLABORAZIONE
+
+$(window).scroll(function() {
+    if (vw > 1120) {
+        var top_of_element = $("#slide-frame").offset().top;
+        var top_of_screen = $(window).scrollTop();
+
+        var topDist = top_of_element - top_of_screen;
+        const map = (value, x1, y1, x2, y2) => (value - x1) * (y2 - x2) / (y1 - x1) + x2;
+        var newWidth = map(topDist, 700, 120, 0, 50);
+        if (topDist < 120) {
+            newWidth = 50
+        }
+        var input = String(newWidth) + "%"
+        $("#slide-frame").css("width", input)
+
+    }
+})
 
 //KINO MESSAGES 
 

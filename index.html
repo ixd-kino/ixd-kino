@@ -8,6 +8,10 @@
     <title>Kino</title>
     <link rel="shortcut icon" href="img/favicon.svg" />
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+    </style>
+
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/velocity.min.js"></script>
 
@@ -40,21 +44,26 @@
     </header>
 
     <section id="hero">
-        <div id="hero-text" class="text container">
-            <h1>Progetta il tuo film con <span>kino</span></h1>
-            <p>Kino ti aiuta a realizzare il tuo film passo dopo passo, rendendo facile e accessibile il processo creativo e organizzativo.</p>
-            <a class="cta-btn" href="">Crea il tuo account</a>
+        <div class="content">
+            <div id="cone">
+            </div>
+            <div id="hero-text" class="text container">
+                <h1>Progetta il tuo film con <span>kino</span></h1>
+                <p>Kino ti aiuta a realizzare il tuo film passo dopo passo, rendendo facile e accessibile il processo creativo e organizzativo.</p>
+                <a class="cta-btn" href="">Crea il tuo account</a>
+            </div>
+            <div id="hero-images" class="image container">
+                <img id="megafono" src="img/megafono-r.png" alt="">
+                <img id="tvhead" src="img/testatv.png" alt="">
+            </div>
         </div>
-        <div id="hero-images" class="image container">
-            <img id="megafono" src="img/megafono.png" alt="">
-            <img id="tvhead" src="img/testatv.png" alt="">
-        </div>
+
     </section>
 
     <section id="video-section">
         <div class="video-container">
             <div class="video-wrapper">
-                <iframe class="embedded-video" src="https://www.youtube.com/embed/C0mr680KjYE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe class="embedded-video" src="https://www.youtube.com/embed/iQjZkX28Bcw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
         </div>
@@ -67,7 +76,7 @@
             <p>Pianifica le tue attività dividendole per fasi di lavorazione, assegnando task e impostando promemoria.</p>
         </div>
         <div class="image container">
-            <img id="clipboard" src="img/clipboard.png" alt="">
+            <img id="clipboard" src="img/ciack.png" alt="">
         </div>
 
     </section>
@@ -89,9 +98,9 @@
             </p>
 
             <div id="btn-container">
-                <button id="documentario" class="showcase-toggler selected-toggler" onclick="toggler(1)">Documentario</button>
-                <button id="horror" class="showcase-toggler" onclick="toggler(2)">Horror</button>
-                <button id="animazione" class="showcase-toggler" onclick="toggler(3)">Animazione</button>
+                <button id="documentario" class="showcase-toggler selected-toggler" onclick="toggler(1)">Il Colore dell'Acqua</button>
+                <button id="horror" class="showcase-toggler" onclick="toggler(2)">Un Treno per Lund </button>
+                <button id="animazione" class="showcase-toggler" onclick="toggler(3)">Alle Porte del Nulla</button>
             </div>
 
         </div>
@@ -99,7 +108,7 @@
         <div id="showcase-wrapper">
             <div id="showcase" class="container">
 
-                <img id="documentario-background" class="showcase-background clipped" src="img/documentario.png" alt="">
+                <img id="documentario-background" class="showcase-background" src="img/documentario.png" alt="">
                 <img id="horror-background" class="showcase-background hide" src="img/horror.png" alt="">
                 <img id="animazione-background" class="showcase-background hide" src="img/animazione.png" alt="">
 
@@ -108,9 +117,9 @@
                     <div>
 
                         <div>
-                            <h3 id="documentario-title" class="showcase-title">I misteri di Torre Velasca</h3>
-                            <h3 id="horror-title" class="showcase-title hide">Zombie in Zambia</h3>
-                            <h3 id="animazione-title" class="showcase-title hide">Popoff</h3>
+                            <h3 id="documentario-title" class="showcase-title">Il Colore dell'Acqua</h3>
+                            <h3 id="horror-title" class="showcase-title hide">Un Treno per Lund</h3>
+                            <h3 id="animazione-title" class="showcase-title hide">Alle Porte del Nulla</h3>
                         </div>
 
                         <div id="timeline-container">
@@ -129,13 +138,15 @@
     </section>
 
     <section id="collaborazione">
-        <div class="image container">
-            <img id="clipboard" src="img/telefono-rr.png" alt="">
-        </div>
 
         <div class="text container">
             <h2><span>Tutti insieme</span> appassionatamente</h2>
             <p>Pianifica le tue attività dividendole per fasi di lavorazione, assegnando task e impostando promemoria.</p>
+            <a class="cta-btn" href="">Invita la crew a provare Kino!</a>
+        </div>
+
+        <div id="slide-frame" class="image container">
+            <img id="moltemani" src="img/collaborazione.png" alt="">
         </div>
 
     </section>
@@ -181,7 +192,7 @@
                 <p>Fatto! Il task “Riconsegnare Attrezzatura” è stato assegnato ad Alberto</p>
             </div>
             <div class="msg-wrapper">
-                <p></p>
+                <p> </p>
             </div>
         </div>
     </section>
