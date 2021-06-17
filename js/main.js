@@ -37,7 +37,7 @@ var toggler = function(status) {
             })
 
         if (vw > 750) {
-            ideazione.velocity({ width: '7%' }, 250);
+            ideazione.velocity({ width: '10%' }, 250);
             scrittura.velocity({ width: '13%' }, 250);
             preprod.velocity({ width: '15%' }, 250);
             produzione.velocity({ width: '16%' }, 250);
@@ -76,10 +76,10 @@ var toggler = function(status) {
         if (vw > 750) {
             ideazione.velocity({ width: '14%' }, 250);
             scrittura.velocity({ width: '8.5%' }, 250);
-            preprod.velocity({ width: '12%' }, 250);
+            preprod.velocity({ width: '15%' }, 250);
             produzione.velocity({ width: '15%' }, 250);
             postprod.velocity({ width: '18%' }, 250);
-            distribuzione.velocity({ width: '10%' }, 250);
+            distribuzione.velocity({ width: '12%' }, 250);
         } else {
             console.log("picio")
             ideazione.velocity({ width: '30%' }, 250);
@@ -111,12 +111,12 @@ var toggler = function(status) {
             })
 
         if (vw > 750) {
-            ideazione.velocity({ width: '7%' }, 250);
-            scrittura.velocity({ width: '13%' }, 250);
-            preprod.velocity({ width: '12%' }, 250);
+            ideazione.velocity({ width: '10%' }, 250);
+            scrittura.velocity({ width: '12%' }, 250);
+            preprod.velocity({ width: '15%' }, 250);
             produzione.velocity({ width: '10%' }, 250);
-            postprod.velocity({ width: '27%' }, 250);
-            distribuzione.velocity({ width: '10%' }, 250);
+            postprod.velocity({ width: '25%' }, 250);
+            distribuzione.velocity({ width: '12%' }, 250);
         } else {
             ideazione.velocity({ width: '27%' }, 250);
             scrittura.velocity({ width: '33%' }, 250);
